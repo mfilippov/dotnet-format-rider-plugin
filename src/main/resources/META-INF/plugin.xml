@@ -1,0 +1,21 @@
+<idea-plugin>
+    <id>me.filippov.Rider.DotNet.Format</id>
+
+    <name>DotNet Format</name>
+
+    <vendor email="mikhail@filippov.me" url="https://filippov.me">Mikhail Filippov</vendor>
+    <description><![CDATA[<h1>DotNet Format Plguin</h1>
+        Plugin to call dotnet format tool on commit.
+            <h2>Features:</h2>
+            <ul>
+                <li>Call dotnet format before commit</li>
+            <ul>]]>
+    </description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <projectService serviceImplementation="me.filippov.rider.dotnet.format.DotNetFormatPluginConfiguration"/>
+        <checkinHandlerFactory implementation="me.filippov.rider.dotnet.format.DotNetFormatCheckinHandlerFactory" />
+    </extensions>
+</idea-plugin>
