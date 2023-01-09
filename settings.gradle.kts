@@ -10,7 +10,7 @@ pluginManagement {
         eachPlugin {
             when(requested.id.name) {
                 // This required to correctly rd-gen plugin resolution.
-                // May be we should switch our naming to match Gradle plugin naming convention.
+                // Maybe we should switch our naming to match Gradle plugin naming convention.
                 "rdgen" -> {
                     useModule("com.jetbrains.rd:rd-gen:${requested.version}")
                 }

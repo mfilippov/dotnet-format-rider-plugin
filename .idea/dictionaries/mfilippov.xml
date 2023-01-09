@@ -1,7 +1,28 @@
 <component name="ProjectDictionaryState">
   <dictionary name="mfilippov">
     <words>
+      <w>alnum</w>
+      <w>appname</w>
+      <w>checkin</w>
+      <w>dirname</w>
+      <w>dists</w>
+      <w>dorg</w>
+      <w>endlocal</w>
+      <w>errorlevel</w>
+      <w>evenodd</w>
       <w>filippov</w>
+      <w>javacmd</w>
+      <w>linejoin</w>
+      <w>miterlimit</w>
+      <w>nologo</w>
+      <w>noncompliant</w>
+      <w>noprofile</w>
+      <w>popd</w>
+      <w>pushd</w>
+      <w>rdgen</w>
+      <w>readarray</w>
+      <w>setlocal</w>
+      <w>ulimit</w>
     </words>
   </dictionary>
 </component>

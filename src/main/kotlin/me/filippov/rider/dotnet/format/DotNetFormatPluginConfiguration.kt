@@ -8,6 +8,7 @@ import com.intellij.util.xmlb.XmlSerializerUtil
 
 @State(name = "DotNetFormatPluginConfiguration", storages = [Storage(StoragePathMacros.WORKSPACE_FILE)])
 class DotNetFormatPluginConfiguration: PersistentStateComponent<DotNetFormatPluginConfiguration> {
+    @Suppress("PropertyName")
     @Volatile
     var DOTNET_FORMAT_BEFORE_PROJECT_COMMIT = false
 

@@ -4,7 +4,7 @@
     <name>DotNet Format</name>
 
     <vendor email="mikhail@filippov.me" url="https://filippov.me">Mikhail Filippov</vendor>
-    <description><![CDATA[<h1>DotNet Format Plguin</h1>
+    <description><![CDATA[<h1>DotNet Format Plugin</h1>
         Plugin to call dotnet format tool on commit.
             <h2>Features:</h2>
             <ul>

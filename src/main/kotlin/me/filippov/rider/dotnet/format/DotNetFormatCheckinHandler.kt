@@ -6,12 +6,14 @@ import com.intellij.openapi.vcs.CheckinProjectPanel
 import com.intellij.openapi.vcs.changes.ui.BooleanCommitOption
 import com.intellij.openapi.vcs.checkin.CheckinHandler
 import com.intellij.openapi.vcs.ui.RefreshableOnComponent
+import com.jetbrains.rider.projectView.solutionDirectory
+import com.jetbrains.rider.projectView.solutionDirectoryPath
 import com.jetbrains.rider.projectView.solutionFile
 import com.jetbrains.rider.runtime.RiderDotNetActiveRuntimeHost
 import kotlin.io.path.Path
 import kotlin.io.path.relativeTo
 
-class DotNetFormatCheckinHanlder(private val panel: CheckinProjectPanel) : CheckinHandler() {
+class DotNetFormatCheckinHandler(private val panel: CheckinProjectPanel) : CheckinHandler() {
     override fun getBeforeCheckinConfigurationPanel(): RefreshableOnComponent {
         val configuration = panel.project.service<DotNetFormatPluginConfiguration>()
         return BooleanCommitOption(
@@ -36,8 +38,9 @@ class DotNetFormatCheckinHanlder(private val panel: CheckinProjectPanel) : Check
                 panel.project.solutionFile.absolutePath,
                 "--include",
                 *panel.virtualFiles
-                        .map { Path(it.path).relativeTo(Path(panel.project.solutionFile.parent)).toString() }
+                        .map { Path(it.path).relativeTo(panel.project.solutionDirectoryPath).toString() }
                         .toTypedArray())
+        pb.directory(panel.project.solutionDirectory)
         val process = pb.start()
         process.waitFor()
         if (process.exitValue() != 0) {

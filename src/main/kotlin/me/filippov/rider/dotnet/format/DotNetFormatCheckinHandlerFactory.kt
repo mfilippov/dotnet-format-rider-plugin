@@ -7,7 +7,7 @@ import com.intellij.openapi.vcs.checkin.CheckinHandlerFactory
 
 class DotNetFormatCheckinHandlerFactory : CheckinHandlerFactory() {
     override fun createHandler(panel: CheckinProjectPanel, commitContext: CommitContext): CheckinHandler {
-        return DotNetFormatCheckinHanlder(panel)
+        return DotNetFormatCheckinHandler(panel)
     }
 }
 
